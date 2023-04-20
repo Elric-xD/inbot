@@ -1,22 +1,21 @@
 from typing import Union
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from config import SUPPORT_CHANNEL, SUPPORT_GROUP
+from config import SUPPORT_CHANNEL, SUPPORT_GROUP, OWNER_ID
 
 def start_pannel(_, BOT_USERNAME):
-    buttons = [
+    buttons = [       
         [
-            InlineKeyboardButton(
-                text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ",
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=new",
-            ),
-            InlineKeyboardButton(
-                text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ channel",
-                url=f"https://t.me/{BOT_USERNAME}?startchannel=new",
-            ),
+            InlineKeyboardButton(text="𝐂ommands 📚", callback_data="settings_back_helper"),
         ],
         [
-            InlineKeyboardButton(text="ʜᴇʟᴘ", callback_data="settings_back_helper"),
-            InlineKeyboardButton(text="sᴇᴛᴛɪɴɢs", callback_data="settings_helper"),
+            InlineKeyboardButton(text="𝐒ettings ⚙", callback_data="settings_helper"),
+        ],
+        [
+            InlineKeyboardButton(text="𝐒upport ⛓", url="https://t.me/TheOfficialChat"),
+            InlineKeyboardButton(text="𝐔pdates ⛓", url="https://t.me/TheUpdateChannel"),
+        ],
+        [
+            InlineKeyboardButton(text="𝐁ot 𝐎wner 🥂", url=f"tg://user?id={OWNER_ID}"),
         ],
         ]
     return buttons
@@ -25,24 +24,21 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="☃️ Aᴅᴅ Mᴇ ɪɴ Yᴏᴜʀ Gʀᴏᴜᴘ ☃️",
+                text="➕ 𝐀dd 𝐌e 𝐓o 𝐘our 𝐂hat ➕",
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=new",
-            ),
-            InlineKeyboardButton(
-                text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ channel",
-                url=f"https://t.me/{BOT_USERNAME}?startchannel=new",
-            ),
+            ),           
         ],
         [
-            InlineKeyboardButton(text="˹ꜱᴜᴘᴘᴏʀᴛ˼", url="https://t.me/Life_Codes"),
-            InlineKeyboardButton(text="˹ᴜᴘᴅᴀᴛᴇꜱ˼", url="https://t.me/Life_Codes"),
+            InlineKeyboardButton(text="𝐂ommands 📚", callback_data="settings_back_helper"),
         ],
         [
-            InlineKeyboardButton(text="♡ Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ♡", callback_data="settings_back_helper"),
+            InlineKeyboardButton(text="𝐒upport ⛓", url="https://t.me/TheOfficialChat"),
+            InlineKeyboardButton(text="𝐔pdates ⛓", url="https://t.me/TheUpdateChannel"),
         ],
         [
-            InlineKeyboardButton(text="• Sᴏᴜʀᴄᴇ •", callback_data="gib_source"),
+            InlineKeyboardButton(text="𝐁ot 𝐎wner 🥂", url=f"tg://user?id={OWNER_ID}"),
         ],
+        
     ]
     return buttons
 
@@ -50,7 +46,7 @@ close_key = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+                        text="𝐂lose 🗑", callback_data="close"
                     )
                 ]
             ]
