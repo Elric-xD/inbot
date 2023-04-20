@@ -4,18 +4,18 @@ from pyrogram.types import InlineKeyboardButton
 def setting_markup(_):
     buttons = [
         [
-            InlineKeyboardButton(text="ᴀᴜᴅɪᴏ ǫᴜ.", callback_data="AQ"),
-            InlineKeyboardButton(text="ᴠɪᴅᴇᴏ ǫᴜ.", callback_data="VQ"),
+            InlineKeyboardButton(text="𝐀udio 𝐒etup 🔊", callback_data="AQ"),
+            InlineKeyboardButton(text="𝐕ideo 𝐒etup 📹", callback_data="VQ"),
         ],
         [
-            InlineKeyboardButton(text="ᴀᴜᴛʜ ᴜsᴇʀs", callback_data="AU"),
+            InlineKeyboardButton(text="𝐀utoried 𝐋ist 🎟", callback_data="AU"),
         ],
         [
-            InlineKeyboardButton(text="ᴘʟᴀʏ ᴍᴏᴅᴇ", callback_data="PM"),
-            InlineKeyboardButton(text="ᴠᴏᴛɪɴɢ ᴍᴏᴅᴇ", callback_data="VM"),
+            InlineKeyboardButton(text="𝐏lay 𝐌ode 💺", callback_data="PM"),
+            InlineKeyboardButton(text="𝐕oting 𝐌enu 🗳", callback_data="VM"),
         ],
         [
-            InlineKeyboardButton(text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"),
+            InlineKeyboardButton(text="𝐂lose 🗑", callback_data="close"),
         ],
     ]
     return buttons
