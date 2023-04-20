@@ -332,37 +332,7 @@ def queue_markup(_, videoid, chat_id):
     ]
     return buttons
 
-# seek
-def panel_markup_2(_, videoid, chat_id):
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text="⏮ 10",
-                callback_data=f"ADMIN 1|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="⏭ 10",
-                callback_data=f"ADMIN 2|{chat_id}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⏮ 30",
-                callback_data=f"ADMIN 3|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="⏭ 30",
-                callback_data=f"ADMIN 4|{chat_id}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="🔙 Back",
-                callback_data=f"MainMarkup {videoid}|{chat_id}",
-            ),           
-        ],
-    ]
-    return buttons
+
 
 # speed
 def panel_markup_3(_, videoid, chat_id):
