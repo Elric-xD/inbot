@@ -10,13 +10,6 @@ def start_pannel(_, BOT_USERNAME):
         [
             InlineKeyboardButton(text="𝐒ettings ⚙", callback_data="settings_helper"),
         ],
-        [
-            InlineKeyboardButton(text="𝐒upport ⛓", url="https://t.me/TheOfficialChat"),
-            InlineKeyboardButton(text="𝐔pdates ⛓", url="https://t.me/TheUpdateChannel"),
-        ],
-        [
-            InlineKeyboardButton(text="𝐁ot 𝐎wner 🥂", url=f"tg://user?id={OWNER_ID}"),
-        ],
         ]
     return buttons
 
@@ -31,14 +24,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         [
             InlineKeyboardButton(text="𝐂ommands 📚", callback_data="settings_back_helper"),
         ],
-        [
-            InlineKeyboardButton(text="𝐒upport ⛓", url="https://t.me/TheOfficialChat"),
-            InlineKeyboardButton(text="𝐔pdates ⛓", url="https://t.me/TheUpdateChannel"),
-        ],
-        [
-            InlineKeyboardButton(text="𝐁ot 𝐎wner 🥂", url=f"tg://user?id={OWNER_ID}"),
-        ],
-        
+                
     ]
     return buttons
 
